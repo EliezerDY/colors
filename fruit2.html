@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fruits</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="fruit.css">
+</head>
+<body>
+<center><h5 style="color:red">Click on the fruit to learn the name!</h5></center>
+<div class="shown">
+<div class="small">
+	<center>
+<a href="#" data-toggle="tooltip" data-placement="top" title="grapes"> <img src="images/grape.jpg"   alt="grapes" onclick="openModal();currentSlide(1)" class="hover-shadow" ></a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="pear"> <img src="images/pear.jpg" alt="pear" onclick="openModal();currentSlide(2)" class="hover-shadow" ></a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="pomegranate"> <img src="images/pomegranate.jpg" alt="pomegranate" onclick="openModal();currentSlide(3)" class="hover-shadow" ></a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="peach"> <img src="images/peach.jpg" alt="peach" onclick="openModal();currentSlide(4)" class="hover-shadow" ></a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="basket of fruit"> <img src="images/basket.jpg" alt="fruitbasket" onclick="openModal();currentSlide(5)" class="hover-shadow" ></a>
+</center>
+</div>
+</div>
+<!--modal-->
+<div id="myModal" class="modal">
+  <span class="close" style="color:white;" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+  	<div class="mySlides">
+      <div class="numbertext"></div>
+      <figure>
+      <img src="images/grape.jpg" alt="grapes" style="margin: 20%; width:60%; height:70%;"><figcaption>Grapes</figcaption>
+  </figure>
+    </div>
+     <!--2-->
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <figure>
+      <img src="images/pear.jpg" alt="pear"style="margin: 20%; width:60%; height:70%;"><figcaption>Pear
+      	</figcaption></figure>
+    </div>
+       <!--3-->
+     <div class="mySlides">
+      <div class="numbertext"></div>
+      <figure>
+      <img src="images/pomegranate.jpg" alt="pomegranate"style="margin: 20%; width:60%; height:70%;"><figcaption>Pomegranate</figcaption></figure>
+    </div>
+    <!--4-->
+    <div class="mySlides">
+      <div class="numbertext"></div>
+       <figure>
+      <img src="images/peach.jpg" alt="peach" style="margin: 20%; width:60%; height:70%;"><figcaption>Peach</figcaption></figure>
+    </div>
+    <div class="mySlides">
+      <div class="numbertext"></div>
+       <figure>
+      <img src="images/basket.jpg" alt="fruitbasket" style="margin: 20%; width:60%; height:70%;"><figcaption>Fruit Basket</figcaption></figure>
+    </div>
+    <!--arrows-->
+    <a class="back" style="color:white;" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" style="color:white;" onclick="plusSlides(1)">&#10095;</a>
+    <div class="text"></div>
+    	
+
+    </div>
+    </div>
+	<!--footer-->
+	<div class="btn-group">
+<a class="btn btn-primary" href="index.html" role="button">Home</a>
+<a class="btn btn-primary" href="colors.html" role="button">Colors</a>
+<a class="btn btn-primary" href="fruit.html" role="button">Fruit</a>
+<a class="btn btn-primary" href="places.html" role="button">Nature</a>
+<a class="btn btn-primary" href="places2.html" role="button">More Nature</a>
+  </div>
+
+
+
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <script>
+    function openModal() {//get the overlay
+  document.getElementById('myModal').style.display = "block";//display the overlay
+}
+
+function closeModal() {//get function to close overlay
+  document.getElementById('myModal').style.display = "none";//no display when closed
+}
+
+var slideIndex = 1;// set index of array of slides to start from 1
+showSlides(slideIndex); 
+
+
+function plusSlides(n) {//get arrow controls
+  showSlides(slideIndex += n);//equal to image displayed
+}
+function currentSlide(n) {//current image shown
+  showSlides(slideIndex = n);//show the slides
+}
+
+function showSlides(n) {//function go through the slides
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+   var captionText = document.getElementById("caption");
+  
+  if (n > slides.length) {slideIndex = 1}//if n is greater than length of slides
+  if (n < 1) {slideIndex = slides.length}//if n is less than length of slides
+  for (i = 0; i < slides.length; i++) {// add 1 to i to count through the slides
+    slides[i].style.display = "none";//don't display the images that aren't chosen by the user
+  }
+  
+  
+  slides[slideIndex-1].style.display = "block";
+ }
+</script>
+</body>
+</html>

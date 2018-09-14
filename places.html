@@ -1,0 +1,82 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Nature</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/nature.css">
+</head>
+<body>
+	<center><h5 style="color:blue;">Click on the image!</h5></center>
+	<div class="card" style="width:50%;">
+		<div class="card-body">
+		 <h5 class="card-title">Forest</h5>
+		<a onclick="myAudioFunction('forest');">
+		<img class="card-img-bottom" src="images/forest.jpg">
+	    </a>
+		</div>
+	</div>
+	<div class="card" style="width:50%;">
+		<div class="card-body">
+		 <h5 class="card-title">Jungle</h5>
+		<a onclick="myAudioFunction('jungle');">
+		<img class="card-img-bottom" src="images/jungle.jpg">
+	    </a>
+		</div>
+	</div>
+	<div class="card" style="width:50%;">
+		<div class="card-body">
+		 <h5 class="card-title">Beach</h5>
+		<a onclick="myAudioFunction('beach');">
+		<img class="card-img-bottom" src="images/beach.jpg">
+	    </a>
+		</div>
+	</div>
+	<div class="card" style="width:50%;">
+		<div class="card-body">
+		 <h5 class="card-title">Swamp</h5>
+		<a onclick="myAudioFunction('swamp');">
+		<img class="card-img-bottom" src="images/swamp.jpg">
+	    </a>
+		</div>
+	</div>
+	<!--footer-->
+	<div class="btn-group-vertical">
+<a class="btn btn-primary" href="index.html" role="button">Home</a>
+<a class="btn btn-primary" href="colors.html" role="button">Colors</a>
+<a class="btn btn-primary" href="fruit.html" role="button">Fruit</a>
+<a class="btn btn-primary" href="fruit2.html" role="button">More Fruit</a>
+<a class="btn btn-primary" href="#" role="button">More Nature</a>
+</div>
+
+
+
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    	var aAudio = new Audio('forest.mp3');
+    	var bAudio = new Audio('jungle.mp3');
+    	var cAudio = new Audio('beach.mp3');
+    	var dAudio = new Audio('swamp.mp3');
+    	var eAudio = new Audio('city.mp3');
+    	function myAudioFunction(images) {
+         if(images == 'forest') {
+             aAudio.play();
+         } else if(images == 'jungle') {
+             bAudio.play();
+         } else if(images == 'beach') {
+             cAudio.play();
+         } else if(images == 'swamp') {
+             dAudio.play();
+         }  else if(images == 'city') {
+             eAudio.play();
+     }
+ }
+ </script>
+</body>
+</html>

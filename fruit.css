@@ -1,0 +1,76 @@
+figcaption{ 
+	color: white;
+ font-size: 150%; 
+ margin-top:-20%;
+ text-align: center;
+ }
+/*lightbox*/
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: black;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: darkgray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.back,
+.forward {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  padding: 16px;
+	width: auto;
+	background-color: black;
+	cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+
+ }
+
+.forward {
+  right: 0;
+}
+.forward:hover {
+  cursor: pointer;
+   border: 1px solid red;
+}
+.back:hover {
+  cursor: pointer;
+   border: 1px solid red;
+}
